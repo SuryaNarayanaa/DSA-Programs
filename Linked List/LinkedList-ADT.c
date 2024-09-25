@@ -265,76 +265,126 @@ Node* sortTernary(Node* head)
     }
     return head;
     }
-
-
-int main()
+Node* sortLL(Node* head)
 {
-int len, elem, position;
-printf("Enter the length of the Linked List 1 : ");
-scanf("%d", &len);
-
-
-
-Node* head1= NULL ;
-Node* head;
-
-
-for (int i=1 ;i<=len; i++)
-{
-    printf("Enter the Element %d", i);
-    scanf("%d", &elem);
-    head1 = insertAtEnd(head1, elem);
+    Node* curr =  head;
 
 }
-printf("Enter the length of the Linked List 2 : ");
-scanf("%d", &len);
+int main() {
+    int choice, len, elem, position;
+    Node* head1 = NULL;
+    Node* head2 = NULL;
+    Node* head = NULL;
 
+    while (1) {
+        printf("\nMenu:\n");
+        printf("1. Create Linked List 1\n");
+        printf("2. Create Linked List 2\n");
+        printf("3. Create Linked List\n");
+        printf("4. Insert at Beginning\n");
+        printf("5. Insert at Position\n");
+        printf("6. Delete at Beginning\n");
+        printf("7. Delete at End\n");
+        printf("8. Delete at Position\n");
+        printf("9. Find Length of Linked List\n");
+        printf("10. Remove Duplicates from Sorted Linked List\n");
+        printf("11. Merge Two Linked Lists into Alternate List\n");
+        printf("12. Sort Ternary Linked List\n");
+        printf("0. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
 
-/*
+        switch (choice) {
+            case 1:
+                printf("Enter the length of Linked List 1: ");
+                scanf("%d", &len);
+                for (int i = 1; i <= len; i++) {
+                    printf("Enter the Element %d: ", i);
+                    scanf("%d", &elem);
+                    head1 = insertAtEnd(head1, elem);
+                }
+                break;
 
-Node* head2= NULL;
+            case 2:
+                printf("Enter the length of Linked List 2: ");
+                scanf("%d", &len);
+                for (int i = 1; i <= len; i++) {
+                    printf("Enter the Element %d: ", i);
+                    scanf("%d", &elem);
+                    head2 = insertAtEnd(head2, elem);
+                }
+                break;
 
+            case 3:
+                printf("Enter the length of Linked List: ");
+                scanf("%d", &len);
+                for (int i = 1; i <= len; i++) {
+                    printf("Enter the Element %d: ", i);
+                    scanf("%d", &elem);
+                    head = insertAtEnd(head, elem);
+                }
+                break;
 
-for (int i=1 ;i<=len; i++)
-{
-    printf("Enter the Element %d", i);
-    scanf("%d", &elem);
-    head2 = insertAtEnd(head2, elem);
+            case 4:
+                printf("Enter the Element to add at beginning: ");
+                scanf("%d", &elem);
+                head = inserAtBeginning(head, elem);
+                displayNode(head);
+                break;
 
+            case 5:
+                printf("Enter the position to insert: ");
+                scanf("%d", &position);
+                printf("Enter the element to insert: ");
+                scanf("%d", &elem);
+                head = insertAtIndex(head, position, elem);
+                displayNode(head);
+                break;
+
+            case 6:
+                head = deleteAtBeginning(head);
+                displayNode(head);
+                break;
+
+            case 7:
+                head = deleteAtEnd(head);
+                displayNode(head);
+                break;
+
+            case 8:
+                printf("Enter the position to delete: ");
+                scanf("%d", &position);
+                head = deleteAtPosition(head, position);
+                displayNode(head);
+                break;
+
+            case 9:
+                printf("Length of the linked list: %d\n", findLength(head));
+                break;
+
+            case 10:
+                head = removeDuplicatesInSortedLL(head);
+                displayNode(head);
+                break;
+
+            case 11:
+                head = merge2LLIntoALternateLL(head1, head2);
+                displayNode(head);
+                break;
+
+            case 12:
+                head = sortTernary(head);
+                displayNode(head);
+                break;
+
+            case 0:
+                exit(0);
+
+            default:
+                printf("Invalid choice! Please try again.\n");
+        }
+    }
+    return 0;
 }
 
-*/
-    // printf("Enter the Element to add at beginning : ");
-    // scanf("%d", &elem);
-    // head = inserAtBeginning(head, elem);
 
-
-    // printf("Enter the position to insert : ");
-    // scanf("%d", &position);
-    // printf("Enter the element to insert : ");
-    // scanf("%d", &elem);
-    // head = insertAtIndex(head, position, elem);
-
-    //head = deleteAtBeginning(head);
-
-    // head  = deleteAtEnd(head);
-
-    //printf("Enter the position to delete : ");
-    //scanf("%d", &position);
-
-    //head = deleteAtPosition(head, position);
-
-    //printf("\nLenght of the linked list: %d\n\n\n", findLength(head));
-
-
-    //head =  removeDuplicatesInSortedLL(head);
-    //head = merge2LLIntoALternateLL(head1 ,head2);
-
-    head = sortTernary(head1);
-
-
-
-
-displayNode(head1);
-
-}
