@@ -58,3 +58,12 @@ git commit -m "Added feature X"
 ```bash
 git push origin feature-name
 ```
+
+## ⭐️ Star the Repository!
+
+**Don't forget to star the repo!** 🌟
+
+If you find this repository useful,  give it a star  to show your support! 
+
+
+---
