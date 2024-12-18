@@ -41,8 +41,9 @@ We welcome contributions! Here's how you can help:
 
 1. **Fork the Repository**: Click the "Fork" button at the top-right of this page.
 2. **Clone the Repository**: Clone the forked repository to your local machine.  
-   ```bash
-   git clone https://github.com/your-username/DSA-Programs.git
+```bash
+   git clone https://github.com/SuryaNarayanaa/DSA-Programs.git
+   ```
 3. **Create a Branch**: Create a new branch for your feature or fix.
 ```bash
 git checkout -b feature-name         
@@ -57,13 +58,3 @@ git commit -m "Added feature X"
 ```bash
 git push origin feature-name
 ```
-
-## 🛠️ How to Contribute
-
-We welcome contributions! Here's how you can help:
-
-1. **Fork the Repository**: Click the "Fork" button at the top-right of this page.
-2. **Clone the Repository**: Clone the forked repository to your local machine.  
-```bash
-   git clone https://github.com/SuryaNarayanaa/DSA-Programs.git
-   ```
